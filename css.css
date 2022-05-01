@@ -1,0 +1,18 @@
+:root {
+    --background-color: black;
+    --foreground-color: white;
+    --secondary-dark: #262626;
+    --secondary-light: #E9EEF0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: white;
+        --foreground-color: black;
+    }
+}
+
+body {
+    background-image: linear-gradient(135deg, var(--background-color) 3.49%, var(--foreground-color) 3.49%, var(--foreground-color) 50%, var(--background-color) 50%, var(--background-color) 53.49%, var(--foreground-color) 53.49%, var(--foreground-color) 100%);
+    background-size: 60.81px 60.81px;
+}
