@@ -13,7 +13,9 @@
     --secondary-dark: #262626;
     --secondary-light: #E9EEF0;
 }
-
+.logo {
+    filter: invert(100%) !important;
+}
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: black;
