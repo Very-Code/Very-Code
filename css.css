@@ -12,7 +12,39 @@
     }
 }
 
-body {
-    background-image: linear-gradient(135deg, var(--background-color) 3.49%, var(--foreground-color) 3.49%, var(--foreground-color) 50%, var(--background-color) 50%, var(--background-color) 53.49%, var(--foreground-color) 53.49%, var(--foreground-color) 100%);
-    background-size: 60.81px 60.81px;
+@font-face {
+    font-family: Title;
+    src: url("fonts/NEXT ART_Heavy.otf");
+  }
+
+body, html {
+    background: repeating-linear-gradient(
+        135deg,
+        black,
+        black 100px,
+        white 100px,
+        white 139px
+      );
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#first {
+    margin: 0;
+    padding: 0;
+    width: 60vw;
+    height: 40vh;
+    background-color: black;
+}
+img {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0), transparent);
+    filter: invert(100%);
+    position: relative;
+    height: 100%;
+}
+h1 {
+    float: right;
+    color: white;
+    font-family: Title, ui-sans-serif;
+    font-size: 4em;
 }
