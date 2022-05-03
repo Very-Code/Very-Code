@@ -72,7 +72,8 @@ p {
     padding-right: 5vw;
 }
 #first img {
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0), transparent);
+    -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to right bottom, rgba(0, 0, 0, 1.0), transparent);
     position: relative;
     height: 100%;
 }
