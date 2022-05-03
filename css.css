@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,200&family=Lora:wght@500&display=swap');
 
 @font-face {
     font-family: Title;
@@ -10,13 +10,13 @@
     --foreground-color: black; */
     --background-color: black;
     --foreground-color: white;
-    --secondary-dark: #262626;
+    --secondary-dark: #111;
     --secondary-light: #E9EEF0;
 }
 .logo {
     filter: invert(100%) !important;
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --background-color: black;
         --foreground-color: white;
@@ -24,7 +24,7 @@
     .logo {
         filter: invert(100%) !important;
     }
-}
+} */
 
 body, html {
     background: repeating-linear-gradient(
@@ -74,6 +74,7 @@ p {
     margin-bottom: 10vh;
     padding-left: 60px;
     padding-right: 5vw;
+    border-radius: 0 0 0px 0;
 }
 #first img {
     -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
@@ -83,7 +84,34 @@ p {
 }
 #second {
     margin: 0;
-    float: right;
+    margin-left: auto;
     padding-left: 5vw;
     padding-right: 60px;
+    border-radius: 0px 0 0 0;
+}
+#second p{
+    text-align: right;
+}
+#quote-background {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 140px;
+}
+#quote-container {
+    background-color: var(--secondary-dark);
+    margin: 0 10px 0 10px;
+    width: 65vw;
+    border-radius: 30px;
+    padding: 2em 3em;
+    font-family: 'Lora', serif;
+    font-size: 2em;
+}
+#quote-background::before, #quote-background::after {
+    content: "~ ඞ ~";
+    color: var(--secondary-dark);
+    font-family: 'Lora', serif;
+    font-size: 2em;
 }
