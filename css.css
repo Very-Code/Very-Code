@@ -6,8 +6,10 @@
 }
 
 :root {
-    --background-color: white;
-    --foreground-color: black;
+/*     --background-color: white;
+    --foreground-color: black; */
+    --background-color: black;
+    --foreground-color: white;
     --secondary-dark: #262626;
     --secondary-light: #E9EEF0;
 }
