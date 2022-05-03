@@ -1,50 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,200&display=swap');
+
+@font-face {
+    font-family: Title;
+    src: url("fonts/NEXT ART_Heavy.otf");
+}
+
 :root {
-    --background-color: black;
-    --foreground-color: white;
+    --background-color: white;
+    --foreground-color: black;
     --secondary-dark: #262626;
     --secondary-light: #E9EEF0;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: white;
-        --foreground-color: black;
+        --background-color: black;
+        --foreground-color: white;
+    }
+    .logo {
+        filter: invert(100%) !important;
     }
 }
-
-@font-face {
-    font-family: Title;
-    src: url("fonts/NEXT ART_Heavy.otf");
-  }
 
 body, html {
     background: repeating-linear-gradient(
         135deg,
-        black,
-        black 100px,
-        white 100px,
-        white 139px
+        var(--background-color),
+        var(--background-color) 100px,
+        var(--foreground-color) 100px,
+        var(--foreground-color) 139px
       );
     height: 100%;
     padding: 0;
     margin: 0;
 }
-#first {
-    margin: 0;
-    padding: 0;
-    width: 60vw;
-    height: 40vh;
-    background-color: black;
+div {
+    box-sizing: border-box;
 }
-img {
+p {
+    color: var(--foreground-color);
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 5vh;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+    height: calc(90vh/2);
+    margin: 0;
+    background-color: var(--background-color);
+}
+.header div {
+    padding-bottom: 5vw;
+}
+.header p {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 3em;
+}
+.header h1{
+    float: right;
+    color: var(--foreground-color);
+    font-family: Title, ui-sans-serif;
+    font-size: 5em;
+}
+#first {
+    margin-bottom: 10vh;
+    padding-left: 60px;
+    padding-right: 5vw;
+}
+#first img {
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0), transparent);
-    filter: invert(100%);
     position: relative;
     height: 100%;
 }
-h1 {
+#second {
+    margin: 0;
     float: right;
-    color: white;
-    font-family: Title, ui-sans-serif;
-    font-size: 4em;
+    padding-left: 5vw;
+    padding-right: 60px;
 }
