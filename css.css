@@ -11,6 +11,7 @@
     --background-color: black;
     --foreground-color: white;
     --secondary-dark: #111;
+    --thirdary-dark: #2f2f2f;
     --secondary-light: #E9EEF0;
 }
 .logo {
@@ -93,7 +94,7 @@ p {
     text-align: right;
 }
 #quote-background {
-    background-color: black;
+    background-color: var(--secondary-dark);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -101,7 +102,7 @@ p {
     padding: 50px 140px;
 }
 #quote-container {
-    background-color: var(--secondary-dark);
+    background-color: var(--thirdary-dark);
     margin: 0 10px 0 10px;
     width: 65vw;
     border-radius: 30px;
@@ -111,7 +112,10 @@ p {
 }
 #quote-background::before, #quote-background::after {
     content: "~ ඞ ~";
-    color: var(--secondary-dark);
+    color: var(--thirdary-dark);
     font-family: 'Lora', serif;
     font-size: 2em;
+}
+article {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
