@@ -115,11 +115,16 @@ p {
     font-family: 'Lora', serif;
     font-size: 2em;
 }
+main {
+    background-color: var(--secondary-dark);
+    padding-top: 2rem;
+}
 h2, span {
     font-family: Title, ui-sans-serif;
     text-align: center;
     font-size: 6rem;
     color: white;
+    margin-top: 0;
 }
 h2 span {
     width: fit-content;
