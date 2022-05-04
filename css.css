@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,200&family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,200&family=Lato:wght@400;700&family=Lora:wght@500&display=swap');
 
 @font-face {
     font-family: Title;
@@ -35,7 +35,6 @@ body, html {
         var(--foreground-color) 100px,
         var(--foreground-color) 139px
       );
-    height: 100%;
     padding: 0;
     margin: 0;
 }
@@ -116,6 +115,84 @@ p {
     font-family: 'Lora', serif;
     font-size: 2em;
 }
+h2, span {
+    font-family: Title, ui-sans-serif;
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+}
+h2 span {
+    width: fit-content;
+    background-color: black;
+    padding: 0.2em;
+}
+.content {
+    margin: 0 12vw;
+    padding: 5rem;
+    display: grid;
+    gap: 2rem;
+    background-color: var(--secondary-dark);
+}
 article {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: var(--thirdary-dark);
+    border-radius: 1rem;
+    font-family: 'Lato', sans-serif;
+    color: var(--foreground-color);
+}
+#projects {
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+h3 {
+    font-size: 3em;
+    font-weight: 600;
+    margin: .5em;
+}
+.project {
+    padding: 1em;
+    border-radius: 0 0 1em 1em;
+}
+.project img{
+    order: -1;
+    object-fit: cover;
+    height: 15rem;
+    margin: -1em -1em 0 -1em;
+    width: calc(100% + 2em);
+}
+#team {
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+.team {
+    padding: 1em;
+}
+h4 {
+    align-self: start;
+    order: -2;
+    margin-top: 0;
+    margin-right: 0em;
+    font-weight: 200;
+    font-family: 'JetBrains Mono', monospace;
+}
+.team img {
+    order: -1;
+    border-radius: 100%;
+}
+.team p {
+    font-size: 1.5em;
+    margin: 0 1em;
+}
+footer {
+    background-color: var(--background-color);
+    padding: 4em 5em;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+footer span {
+    font-weight: 200;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1em;
 }
