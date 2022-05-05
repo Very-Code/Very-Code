@@ -248,4 +248,7 @@ footer span {
         padding-right: 0 ;
         width: 100vw ;
     }
+    #second {
+        overflow: hidden;
+    }
 }
