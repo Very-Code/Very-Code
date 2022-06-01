@@ -4,47 +4,35 @@
     font-family: Title;
     src: url("fonts/NEXT ART_Heavy.otf");
 }
-
 :root {
-/*     --background-color: white;
-    --foreground-color: black; */
-    --background-color: black;
-    --foreground-color: white;
-    --secondary-dark: #111;
-    --thirdary-dark: #2f2f2f;
-    --secondary-light: #E9EEF0;
+    --clr-dark: #0F0E0E;
+    --clr-dark2: #201F1E;
+    --clr-dark3: #252F30;
+    --clr-light: #E9EEF0;
 }
-.logo {
-    filter: invert(100%) !important;
+*, *::before, *::after {
+    box-sizing: border-box;
+    color-scheme: dark;
 }
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: black;
-        --foreground-color: white;
-    }
-    .logo {
-        filter: invert(100%) !important;
-    }
-} */
-
 body, html {
-    background: repeating-linear-gradient(
-        135deg,
-        var(--background-color),
-        var(--background-color) 100px,
-        var(--foreground-color) 100px,
-        var(--foreground-color) 139px
-      );
     padding: 0;
     margin: 0;
+    color: white;
+    background-color: var(--clr-dark);
+}
+header {
+    background: repeating-linear-gradient(
+        135deg,
+        black,
+        black 100px,
+        white 100px,
+        white 139px
+      );
 }
 div {
     box-sizing: border-box;
 }
-p {
-    color: var(--foreground-color);
-}
-.header {
+header > div {
     display: flex;
     flex-direction: row;
     padding-top: 20px;
@@ -54,19 +42,18 @@ p {
     width: 70vw;
     height: calc(90vh/2);
     margin: 0;
-    background-color: var(--background-color);
+    background-color: black;
 }
-.header div {
+header > div div {
     padding-bottom: 5vw;
 }
-.header p {
+header > div p {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 400;
     font-size: 2.5vw;
 }
-.header h1{
+header > div h1{
     float: right;
-    color: var(--foreground-color);
     font-family: Title, ui-sans-serif;
     font-size: 4.2vw;
 }
@@ -97,7 +84,7 @@ p {
     margin-left: 3em;
 }
 #quote-background {
-    background-color: var(--secondary-dark);
+    background-color: var(--clr-dark);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -105,7 +92,7 @@ p {
     padding: 50px 140px;
 }
 #quote-container {
-    background-color: var(--thirdary-dark);
+    background-color: var(--clr-dark2);
     margin: 0 10px 0 10px;
     width: 65vw;
     border-radius: 30px;
@@ -115,13 +102,9 @@ p {
 }
 #quote-background::before, #quote-background::after {
     content: "~ ඞ ~";
-    color: var(--thirdary-dark);
+    color: var(--clr-dark2);
     font-family: 'Lora', serif;
     font-size: 2em;
-}
-main {
-    background-color: var(--secondary-dark);
-    padding-top: 2rem;
 }
 h2, span {
     font-family: Title, ui-sans-serif;
@@ -140,17 +123,16 @@ h2 span {
     padding: 5rem;
     display: grid;
     gap: 2rem;
-    background-color: var(--secondary-dark);
+    background-color: var(--clr-dark);
 }
 article {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-flow: column;
     align-items: center;
-    background-color: var(--thirdary-dark);
+    background-color: var(--clr-dark2);
     border-radius: 1rem;
     font-family: 'Lato', sans-serif;
-    color: var(--foreground-color);
 }
 #projects {
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
@@ -194,10 +176,10 @@ h4 {
     margin: 0 1em;
 }
 footer {
-    background-color: var(--background-color);
+    background-color: black;
     padding: 4em 5em;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 footer span {
@@ -207,16 +189,16 @@ footer span {
 }
 
 @media only screen and (max-width: 900px) {
-    .header {
+    header > div {
         width: 90vw ;
     }
-    .header h1 {
+    header > div h1 {
         font-size: 2.5em ;
     }
-    .header img {
+    header > div img {
         max-height: 30vh;
     }
-    .header p {
+    header > div p {
         font-size: 1em ;
     }
     #quote-background {
@@ -243,7 +225,7 @@ footer span {
     }
 }
 @media only screen and (max-width: 450px) {
-    .header {
+    header > div {
         padding-left: 0 ;
         padding-right: 0 ;
         width: 100vw ;
